@@ -1,0 +1,4 @@
+estrategia,descricao,limiar_frac_imunizados,limiar_%_imunizados
+random,Imunização aleatória,,
+hubs,Imunização de hubs (maior grau),0.05,5.0
+neighbors,Imunização de vizinhos aleatórios,0.2,20.0

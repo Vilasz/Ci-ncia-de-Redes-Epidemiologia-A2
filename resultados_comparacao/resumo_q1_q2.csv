@@ -1,0 +1,7 @@
+questao,rede,cenario,beta,mu,R0,R0_maior_1,prevalencia_teorica_frac,prevalencia_simulada_frac,csv,prevalencia_teorica_%,prevalencia_simulada_%
+1,Erdős-Rényi (ER),a,0.02,0.1,4.0,True,0.75,0.6625360333333334,resultados/simulacao_1_beta_0.02_mu_0.1.csv,75.0,66.25360333333334
+1,Erdős-Rényi (ER),b,0.02,0.4,1.0,False,0.0,0.00045976666666666677,resultados/simulacao_2_beta_0.02_mu_0.4.csv,0.0,0.04597666666666668
+1,Erdős-Rényi (ER),c,0.02,0.5,0.8,False,0.0,1.966666666666667e-05,resultados/simulacao_3_beta_0.02_mu_0.5.csv,0.0,0.001966666666666667
+2,Livre de escala,a,0.01,0.1,2.0,True,0.5,0.35901580000000005,resultados_questao2/simulacao_1_beta_0.01_mu_0.1.csv,50.0,35.90158
+2,Livre de escala,b,0.01,0.2,1.0,False,0.0,0.13608943333333334,resultados_questao2/simulacao_2_beta_0.01_mu_0.2.csv,0.0,13.608943333333334
+2,Livre de escala,c,0.01,0.3,0.6666666666666667,False,0.0,0.06588193333333334,resultados_questao2/simulacao_3_beta_0.01_mu_0.3.csv,0.0,6.588193333333334
