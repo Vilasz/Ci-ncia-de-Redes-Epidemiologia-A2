@@ -130,9 +130,6 @@ def run_experiments_for_strategy(strategy, frac_list, num_simulations=50, max_st
     results = []
     G_base = generate_scale_free_graph(N, K_MEDIO, GAMMA)
     
-    # Pré-calcula os vizinhos para evitar overhead dentro do loop da simulação
-    # Isso ajuda pois networkx é lento para acessar vizinhos repetidamente
-    # Mas note que sua função simulate... já faz isso internamente.
     
     for frac in tqdm(frac_list, desc=f"Estratégia {strategy}"):
         immune_nodes = choose_immunized_nodes(G_base, frac, strategy)
@@ -159,7 +156,6 @@ def estimate_threshold(results, epsilon=0.01):
 def main():
     os.makedirs("resultados_questao3", exist_ok=True)
 
-    # Frações de vacinação a testar: 0.00, 0.05, 0.10, ..., 0.60
     frac_list = [i / 20 for i in range(0, 13)]
 
     estrategias = {
@@ -179,7 +175,6 @@ def main():
         )
         todos_resultados[key] = resultados
 
-        # salva em CSV
         df = pd.DataFrame(resultados, columns=["frac_imunizados", "prevalencia_media"])
         df.to_csv(f"resultados_questao3/resultados_{key}.csv", index=False)
 
@@ -194,7 +189,6 @@ def main():
             print(f"Estratégia: {estrategias[key]}")
             print("  Não foi encontrado limiar dentro do intervalo de frações testado.")
 
-    # Plota as curvas de prevalência vs. fração de imunizados
     plt.figure(figsize=(10, 6))
     for key, label in estrategias.items():
         fracs = [x[0] for x in todos_resultados[key]]
