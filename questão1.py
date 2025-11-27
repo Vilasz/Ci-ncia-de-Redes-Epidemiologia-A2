@@ -5,9 +5,9 @@ propagação da infecção pelo modelo SIS com os parâmetros abaixo e compare c
 resultados esperados. (sugestão: faça em torno de 100 simulações e descreva o
 comportamento da epidemia “na média”)
 
-a. 𝛽 = 0.02 e 𝜇 = 0.1
-b. 𝛽 = 0.02 e 𝜇 = 0.4
-c. 𝛽 = 0.02 e 𝜇 = 0.5
+a. beta = 0.02 e mi = 0.1
+b. beta = 0.02 e mi = 0.4
+c. beta = 0.02 e mi = 0.5
 
 '''
 
